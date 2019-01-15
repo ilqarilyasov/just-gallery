@@ -14,6 +14,7 @@
 		82DF86B621EE3E9D00A9E13A /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF86B521EE3E9D00A9E13A /* PaintingViewController.swift */; };
 		82DF86B821EE3F0400A9E13A /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF86B721EE3F0400A9E13A /* PaintingTableViewCell.swift */; };
 		82DF86BA21EE3F6000A9E13A /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF86B921EE3F6000A9E13A /* Painting.swift */; };
+		82DF86BC21EE40D100A9E13A /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF86BB21EE40D100A9E13A /* PaintingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		82DF86B521EE3E9D00A9E13A /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
 		82DF86B721EE3F0400A9E13A /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		82DF86B921EE3F6000A9E13A /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
+		82DF86BB21EE40D100A9E13A /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				82DF86A321EE3BCB00A9E13A /* AppDelegate.swift */,
 				82DF86B921EE3F6000A9E13A /* Painting.swift */,
+				82DF86BB21EE40D100A9E13A /* PaintingController.swift */,
 				82DF86B721EE3F0400A9E13A /* PaintingTableViewCell.swift */,
 				82DF86B521EE3E9D00A9E13A /* PaintingViewController.swift */,
 				82DF86A721EE3BCB00A9E13A /* Main.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82DF86A421EE3BCB00A9E13A /* AppDelegate.swift in Sources */,
+				82DF86BC21EE40D100A9E13A /* PaintingController.swift in Sources */,
 				82DF86B621EE3E9D00A9E13A /* PaintingViewController.swift in Sources */,
 				82DF86B821EE3F0400A9E13A /* PaintingTableViewCell.swift in Sources */,
 				82DF86BA21EE3F6000A9E13A /* Painting.swift in Sources */,

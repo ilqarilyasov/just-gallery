@@ -8,23 +8,29 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController {
-
+class PaintingViewController: UIViewController, UITableViewDataSource {
+    
+    let paintingController = PaintingController()
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self // ADD
+        tableView.rowHeight = 300 // ADD
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return paintingController.paintings.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "artCell", for: indexPath)
+        guard let unwrappedCell = cell as? PaintingTableViewCell else { return cell }
+        
+        
+        
+        return unwrappedCell
+    }
+    
 
 }

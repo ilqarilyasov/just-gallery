@@ -34,11 +34,14 @@
                                                     <rect key="frame" x="23" y="19" width="313" height="262"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-bz-6VL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="116"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="224"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-d8-RqS">
-                                                            <rect key="frame" x="0.0" y="124" width="313" height="138"/>
+                                                            <rect key="frame" x="0.0" y="232" width="313" height="30"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="likeButtonTapped:" destination="JOm-qw-o2s" eventType="touchUpInside" id="WiN-VN-5Ef"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -50,6 +53,10 @@
                                                 <constraint firstItem="xHD-cN-eTu" firstAttribute="top" secondItem="qjX-Vf-tLO" secondAttribute="topMargin" constant="8" id="fVf-fT-va8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="bLI-bz-6VL" id="F6N-kS-GCP"/>
+                                            <outlet property="likeButton" destination="TT0-d8-RqS" id="Oz1-zB-I93"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -64,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Art Gallery" id="GQm-3M-Wkt"/>
+                    <connections>
+                        <outlet property="tableView" destination="HeF-1Z-tXL" id="B6C-4m-wK7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
