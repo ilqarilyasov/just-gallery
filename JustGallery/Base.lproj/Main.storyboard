@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,25 +19,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-1Z-tXL">
-                                <rect key="frame" x="8" y="124" width="359" height="535"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="artCell" rowHeight="300" id="JOm-qw-o2s" customClass="PaintingTableViewCell" customModule="JustGallery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="artCell" rowHeight="320" id="JOm-qw-o2s" customClass="PaintingTableViewCell" customModule="JustGallery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JOm-qw-o2s" id="qjX-Vf-tLO">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xHD-cN-eTu">
-                                                    <rect key="frame" x="23" y="19" width="313" height="262"/>
+                                                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xHD-cN-eTu">
+                                                    <rect key="frame" x="23" y="19" width="329" height="282"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-bz-6VL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="313" height="224"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bLI-bz-6VL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="232"/>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-d8-RqS">
-                                                            <rect key="frame" x="0.0" y="232" width="313" height="30"/>
-                                                            <state key="normal" title="Button"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-d8-RqS">
+                                                            <rect key="frame" x="0.0" y="252" width="329" height="30"/>
+                                                            <state key="normal" title="Like"/>
                                                             <connections>
                                                                 <action selector="likeButtonTapped:" destination="JOm-qw-o2s" eventType="touchUpInside" id="WiN-VN-5Ef"/>
                                                             </connections>
@@ -46,15 +45,17 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="xHD-cN-eTu" firstAttribute="leading" secondItem="qjX-Vf-tLO" secondAttribute="leadingMargin" constant="8" id="0wb-Fg-E8d"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="xHD-cN-eTu" secondAttribute="bottom" constant="8" id="Awd-gF-u9g"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="xHD-cN-eTu" secondAttribute="trailing" constant="8" id="bA6-Ex-yAp"/>
-                                                <constraint firstItem="xHD-cN-eTu" firstAttribute="top" secondItem="qjX-Vf-tLO" secondAttribute="topMargin" constant="8" id="fVf-fT-va8"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xHD-cN-eTu" secondAttribute="bottom" constant="19" id="8GL-cS-06W"/>
+                                            <constraint firstAttribute="trailing" secondItem="xHD-cN-eTu" secondAttribute="trailing" constant="23" id="9sr-05-8VK"/>
+                                            <constraint firstItem="xHD-cN-eTu" firstAttribute="leading" secondItem="JOm-qw-o2s" secondAttribute="leading" constant="23" id="NpE-BM-qjF"/>
+                                            <constraint firstItem="xHD-cN-eTu" firstAttribute="centerY" secondItem="JOm-qw-o2s" secondAttribute="centerY" id="pLz-IC-Ces"/>
+                                            <constraint firstItem="xHD-cN-eTu" firstAttribute="centerX" secondItem="JOm-qw-o2s" secondAttribute="centerX" id="sDo-9W-HWK"/>
+                                            <constraint firstItem="xHD-cN-eTu" firstAttribute="top" secondItem="JOm-qw-o2s" secondAttribute="top" constant="19" id="stb-hq-Vew"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="imgView" destination="bLI-bz-6VL" id="F6N-kS-GCP"/>
+                                            <outlet property="imgView" destination="bLI-bz-6VL" id="02P-vd-7XQ"/>
                                             <outlet property="likeButton" destination="TT0-d8-RqS" id="Oz1-zB-I93"/>
                                         </connections>
                                     </tableViewCell>
@@ -63,10 +64,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HeF-1Z-tXL" secondAttribute="trailing" constant="8" id="MWX-Ch-m24"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HeF-1Z-tXL" secondAttribute="bottom" constant="8" id="lH0-ub-pOk"/>
-                            <constraint firstItem="HeF-1Z-tXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ldb-v2-Zdd"/>
-                            <constraint firstItem="HeF-1Z-tXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sl6-R9-jw5"/>
+                            <constraint firstItem="HeF-1Z-tXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fVJ-r8-ark"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HeF-1Z-tXL" secondAttribute="trailing" id="gEZ-IT-6f1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HeF-1Z-tXL" secondAttribute="bottom" id="jf4-pz-YOj"/>
+                            <constraint firstItem="HeF-1Z-tXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tzc-sw-zbS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

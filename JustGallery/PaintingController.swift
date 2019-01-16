@@ -23,10 +23,10 @@ class PaintingController {
             guard let image = UIImage(named: imageName) else { return }
             let painting = Painting(image: image)
             paintings.append(painting)
-            
         }
     }
     
-    
-    
+    func toggleIsLike(on index: Int) {
+        paintings[index].isLiked = !paintings[index].isLiked
+    }
 }
