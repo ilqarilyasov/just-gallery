@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaintingViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate {
+class PaintingViewController: UIViewController, UITableViewDataSource, PaintingTableViewCellDelegate, UITableViewDelegate {
     
     let paintingController = PaintingController()
     
@@ -17,6 +17,7 @@ class PaintingViewController: UIViewController, UITableViewDataSource, PaintingT
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 320
     }
     
@@ -35,6 +36,13 @@ class PaintingViewController: UIViewController, UITableViewDataSource, PaintingT
         
         return unwrappedCell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let painting = paintingController.paintings[indexPath.row]
+//        let aspectRatio = paintingController.aspectRation(for: painting)
+////        tableView.rowHeight = CGFloat(integerLiteral: (aspectRatio * 320))
+//        return CGFloat(integerLiteral: (aspectRatio * 320))
+//    }
     
     func likeButtonTapped(on cell: PaintingTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }

@@ -29,4 +29,12 @@ class PaintingController {
     func toggleIsLike(on index: Int) {
         paintings[index].isLiked = !paintings[index].isLiked
     }
+    
+    func aspectRation(for painting: Painting) -> Int {
+        let height = painting.image.size.height
+        let width = painting.image.size.width
+        let aspectRatio = Int(width / height)
+        
+        return aspectRatio
+    }
 }
